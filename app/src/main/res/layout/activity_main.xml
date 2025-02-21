@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Judul Aplikasi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APLIKASI PERHITUNGAN DISKON"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+
+    <!-- Input Harga -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/black"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/formHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Harga"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input Diskon -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:boxStrokeColor="@color/black"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/formDiskon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Diskon (%)"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Tombol Hitung -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hitung Diskon"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/black"
+        android:textColor="@color/white" />
+
+    <!-- Hasil Perhitungan -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga: -"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textDiskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diskon: -"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Harga: -"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
